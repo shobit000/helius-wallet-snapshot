@@ -5,42 +5,48 @@ A tiny Node script that prints a quick snapshot of any Solana wallet using two H
 - `getTransactionsForAddress` for recent transaction activity
 - `getAssetsByOwner` (DAS API) for SOL balance, tokens and NFTs
 
-No dependencies. Under 100 lines.
+No dependencies. Around 100 lines.
 
 ## Run it
 
 1. Get a free API key at [dashboard.helius.dev](https://dashboard.helius.dev)
-2. Run:
+2. Run on Mac or Linux:
 
 ```bash
 HELIUS_API_KEY=your_key node demo.mjs <wallet_address>
 ```
 
-Requires Node 18 or newer.
+Or on Windows PowerShell:
 
-Or keep the key in a private `.env` file (copy `.env.example` to `.env` and add your key), then run:
-
-```bash
-node --env-file=.env demo.mjs <wallet_address>
+```powershell
+$env:HELIUS_API_KEY="your_key"
+node demo.mjs <wallet_address>
 ```
 
-This needs Node 20.6 or newer. The `.env` file is git-ignored, so your key never gets committed. Never put your key in `demo.mjs`.
+Requires Node 18 or newer. Never put your key in the code.
 
 ## Example output
 
 ```
-Snapshot for <wallet>
+Snapshot for 86xCnPeV69n6t3DnyGvkKobf9FdN2H9oiVDdaMpo2MMY
 
 Activity (last 50 transactions)
-  succeeded: 48  failed: 2
-  4xKp9Qm2aB7c...  ok      3h ago
+  succeeded: 50  failed: 0
+  2C5sjky3dqkZ...  ok      1h ago
+  4hQ7pRMTfz5j...  ok      1h ago
+  hcvKarG25wsK...  ok      2h ago
+  5W1j6VJevwyf...  ok      5h ago
+  4QT33Rv5GPcX...  ok      8h ago
 
-Holdings
-  SOL balance: 1.2034
-  fungible tokens: 6  NFTs and other assets: 12
+Holdings (first 100 assets)
+  SOL balance: 1348.2797
+  fungible tokens: 40  NFTs and other assets: 60
+  - WILLY
+  - Toly The Dragon
+  - $50 is all you need
+  - Claim your 5000WIF
+  - In Solana We Trust
 ```
-
-(Replace this with your real output before publishing.)
 
 ## Why these two methods
 
@@ -55,4 +61,4 @@ Helius lists `getTransactionsForAddress` as the modern path for transaction hist
 
 ## Author
 
-Shobit Garg - [X](https://x.com/shobit0019) | [GitHub](https://github.com/shobit000)
+Shobit Garg - [GitHub](https://github.com/shobit000)
