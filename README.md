@@ -55,4 +55,4 @@ Helius lists `getTransactionsForAddress` as the modern path for transaction hist
 
 ## Author
 
-Shobit Garg - [X](https://x.com/your_handle) | [GitHub](https://github.com/your_handle)
+Shobit Garg - [X](https://x.com/shobit0019) | [GitHub](https://github.com/shobit000)
